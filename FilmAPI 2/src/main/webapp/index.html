@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+<title>Films Database</title>
+</head>
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.22/datatables.min.css"/>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.22/datatables.min.js"></script>	
+
+<link rel="stylesheet" href="./CSS/Table.css">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<body onload="getFilm('films')">
+
+	<div class="Header">
+	<h1>JMDB FILMS</h1>
+	</div>
+	<div class="container text-center">
+<!------create a modal for the add function------>
+		<!-- Trigger the modal with a button -->
+		<button type="button" class="btn-lg transparent-button" data-toggle="modal"
+			data-target="#myModal">Add New Film</button>
+
+		<!-- Modal -->
+		<div class="modal fade" id="myModal" role="dialog">
+			<div class="modal-dialog">
+
+				<!-- Modal content-->
+				<div class="modal-content">
+  					<button type="button" class="close" data-dismiss="modal">&times;</button>
+  					<h4 class="modal-title">Add a Film</h4>
+				</div>
+					<div class="modal-body">
+						<label>Title:</label> <input type="text" placeholder="Title"
+							id="Title"> <br> <label>Year of Release:</label> <input
+							type="number" placeholder="Year" id="Year"> <br> <label>Main
+							Cast Member:</label> <input type="text" placeholder="Main Star" id="Mstar">
+						<br> <label>Director of film:</label> <input type="text"
+							placeholder="Director" id="Dir"> <br> <label>Review:</label>
+						<input type="text" placeholder="Review" id="Rev"> <br>
+
+					</div>
+					<div class="modal-footer">
+						<button type="submit" class="btn btn-default" onclick="addFilm()"
+							data-dismiss="modal">Add</button>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+	</div>
+<!------select for the formats ------>
+	<label for="data-type">Film Data Type:</label>
+	<select id="data-type">
+		<option value="standard" selected="selected">Formats</option>
+		<option value="application/xml">XML</option>
+		<option value="application/json">JSON</option>
+		<option value="text/plain">Text</option>	
+	</select>
+	<button onclick = "changeFilm()">Change Format</button>
+
+	<table id="films">
+	</table>
+
+	
+	
+
+	<script src="./scripts/APIdata.js"></script>
+	<script src="./scripts/Films.js"></script>
+	<script
+		src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+
+
+</body>
+
+
+</html>

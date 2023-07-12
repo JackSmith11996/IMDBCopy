@@ -1,0 +1,59 @@
+@charset "UTF-8";
+
+h1{
+	
+	text-align: center;
+}
+
+.transparent-button {
+    background-color: transparent;
+    border: none;
+    color: inherit;
+    outline: none;
+  }
+  
+table{
+  border: 1px solid;
+}
+th{
+	text-align: center;
+	align-items: center;
+	border-bottom: 1px solid;
+	width: 14%;
+	font-size:15px;
+}
+
+.delete{
+	
+	font-size: 50px; 
+	text-align:center;
+	background-color:red;
+	margin-left:30%;
+	width: 75px;
+	height:75px;
+	
+}
+
+td{
+	
+	
+	
+	border-bottom: 1px solid;
+	border-right:1px solid;
+	width: 14%;
+	align-items: center;
+}
+
+
+
+td:hover {background-color: beige;}
+
+tr{
+	
+	width:100%;
+}
+form{
+	
+	size: 50px;
+	
+}
